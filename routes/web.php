@@ -14,4 +14,4 @@ use App\Http\Controllers\ImagesController;
 |
 */
 
-Route::get('/images', [ImagesController::class, 'index'])->name('images');
+Route::get('/images', [ImagesController::class, 'getApiExternal'])->name('images');
