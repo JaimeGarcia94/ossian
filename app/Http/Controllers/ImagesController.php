@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Image;
-use App\Http\Resources\Image as ImageResource;
 
 class ImagesController extends Controller
 {
@@ -29,13 +28,7 @@ class ImagesController extends Controller
                 'description' => $data->description,
                 'url' => $data->url,
             ]);
-
-//            if(isset($images)){
-//                return response()->json('ya hay datos');
-//            }else{
-                $images->save();
-//            }
-
+            $images->save();
         }
 
         return response()->json('Successfully added');
