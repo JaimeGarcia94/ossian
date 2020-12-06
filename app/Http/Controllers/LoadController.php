@@ -5,13 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Image;
 
-class ImagesController extends Controller
+class LoadController extends Controller
 {
     public function index()
     {
-        return view('images.list', [
-//            'api' => $this->getApiExternal()
-        ]);
+        return view('load.content');
     }
 
     public function getApiExternal()
@@ -31,7 +29,7 @@ class ImagesController extends Controller
             $images->save();
         }
 
-        return response()->json('Successfully added');
+        return redirect()->route('list-images');
 
     }
 }

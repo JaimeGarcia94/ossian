@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ImagesController;
+use App\Http\Controllers\LoadController;
+use App\Http\Controllers\ListController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +15,7 @@ use App\Http\Controllers\ImagesController;
 |
 */
 
-Route::get('/uploads-images', [ImagesController::class, 'getApiExternal'])->name('uploads-images');
+Route::get('/welcome-ossian', [LoadController::class, 'index']);
+Route::get('/load', [LoadController::class, 'getApiExternal'])->name('load-images');
+
+Route::get('/list', [ListController::class, 'index'])->name('list-images');
