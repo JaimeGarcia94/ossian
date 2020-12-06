@@ -21,7 +21,7 @@ class ListController extends Controller
         foreach ($listData as $data) {
             $arrayData[] = array(
                'title' => $data->title,
-               'category' => $data->caregory,
+               'category' => $data->category,
                'description' => $data->description,
                'url' => $data->url,
             );
