@@ -29,7 +29,7 @@ class LoadController extends Controller
             $images->save();
         }
 
-        return redirect()->route('list-images');
+        return redirect()->route('list');
 
     }
 }
