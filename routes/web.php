@@ -22,5 +22,5 @@ Route::get('/load', [LoadController::class, 'getApiExternal'])->name('load');
 Route::get('/list', [ListController::class, 'index'])->name('list');
 
 Route::get('/create', [CreateController::class, 'index'])->name('create');
-Route::post('/create/image', [CreateController::class, 'create'])->name('create.image');
+Route::post('/upload-image', [CreateController::class, 'create'])->name('create.image');
 //Route::get('/create/image/{filename}', [ListController::class, 'getImage'])->name('create.avatar');
