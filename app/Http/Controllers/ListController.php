@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Image;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\Response;
 use Illuminate\Http\Request;
 
 class ListController extends Controller
@@ -29,4 +31,11 @@ class ListController extends Controller
 
         return $arrayData;
     }
+
+//    public function getImage($filename)
+//    {
+//        $file = Storage::disk('images')->get($filename);
+//
+//        return new Response($file, 200);
+//    }
 }

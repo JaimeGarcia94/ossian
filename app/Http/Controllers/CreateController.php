@@ -29,6 +29,8 @@ class CreateController extends Controller
         $category = $request->input('category');
         $description = $request->input('description');
         $url = $request->file('url');
+//        var_dump($url);
+//        die();
 
         $create->title = $title;
         $create->category = $category;
@@ -44,6 +46,6 @@ class CreateController extends Controller
 
         $create->save();
 
-        return redirect()->route('create')->with(['message'=>'Imagen creada correctamente']);
+        return redirect()->route('list')->with(['message'=>'Imagen creada correctamente']);
     }
 }

@@ -23,4 +23,4 @@ Route::get('/list', [ListController::class, 'index'])->name('list');
 
 Route::get('/create', [CreateController::class, 'index'])->name('create');
 Route::post('/create/image', [CreateController::class, 'create'])->name('create.image');
-//Route::get('/create/image/{filename}', [CreateController::class, 'getImage'])->name('create.avatar');
+//Route::get('/create/image/{filename}', [ListController::class, 'getImage'])->name('create.avatar');
