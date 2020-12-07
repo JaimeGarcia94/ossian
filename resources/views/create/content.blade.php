@@ -1,5 +1,3 @@
-
-
 <form method="POST" action="{{ route('create.image') }}" enctype="multipart/form-data">
     @csrf
 
@@ -15,7 +13,7 @@
         <textarea id="description" name="description"></textarea>
 
         <label for="url">Imagen</label>
-        <input type="file" id="url" name="url"/>
+        <input type="text" id="url" name="url" placeholder="Copiar direccion de imagen"/>
 
         <button type="submit">
             crear

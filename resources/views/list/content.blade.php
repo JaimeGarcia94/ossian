@@ -10,5 +10,8 @@
     <p>{{ $data['category'] }}</p>
     <p>{{ $data['description'] }}</p>
     <img src="{{ $data['url'] }}" alt="image">
-{{--    <img src="{{ route('create.avatar', ['filename' => $data['url']]) }}" alt="image" style="width: 200px; height: 200px">--}}
+    <div class="detalle">
+        <a href="{{ route('image.detail', ['id' => $data['id']]) }}">ver detalle</a>
+    </div>
 @endforeach
+

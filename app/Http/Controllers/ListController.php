@@ -22,6 +22,7 @@ class ListController extends Controller
 
         foreach ($listData as $data) {
             $arrayData[] = array(
+               'id' => $data->id,
                'title' => $data->title,
                'category' => $data->category,
                'description' => $data->description,
@@ -32,10 +33,4 @@ class ListController extends Controller
         return $arrayData;
     }
 
-//    public function getImage($filename)
-//    {
-//        $file = Storage::disk('images')->get($filename);
-//
-//        return new Response($file, 200);
-//    }
 }

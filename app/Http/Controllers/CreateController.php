@@ -22,30 +22,21 @@ class CreateController extends Controller
             'title' => ['required', 'string', 'max:100'],
             'category' => ['required', 'string', 'max:100'],
             'description' => ['required', 'string', 'max:255'],
-            'url' => ['required', 'image'],
+            'url' => ['required', 'string', 'max:255'],
         ]);
 
         $title = $request->input('title');
         $category = $request->input('category');
         $description = $request->input('description');
-        $url = $request->file('url');
-//        var_dump($url);
-//        die();
+        $url = $request->input('url');
 
         $create->title = $title;
         $create->category = $category;
         $create->description = $description;
-
-        if ($url){
-            $url_name = time().$url->getClientOriginalName();
-
-            Storage::disk('images')->put($url_name, File::get($url));
-
-            $create->url = $url_name;
-        }
+        $create->url = $url;
 
         $create->save();
 
-        return redirect()->route('list')->with(['message'=>'Imagen creada correctamente']);
+        return redirect()->route('image.detail', ['id' => $create->id])->with(['message'=>'Imagen creada correctamente']);
     }
 }
