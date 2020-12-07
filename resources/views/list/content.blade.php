@@ -11,7 +11,7 @@
     <p>{{ $data['description'] }}</p>
     <img src="{{ $data['url'] }}" alt="image">
     <div class="detalle">
-        <a href="{{ route('image.detail', ['id' => $data['id']]) }}">ver detalle</a>
+        <a href="{{ route('detail', ['id' => $data['id']]) }}">ver detalle</a>
     </div>
 @endforeach
 

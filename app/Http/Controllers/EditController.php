@@ -4,20 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Models\Image;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\File;
 
-class CreateController extends Controller
+class EditController extends Controller
 {
-    public function index()
+    public function edit($id)
     {
-        return view('create.content');
+        $data = Image::find($id);
+
+        return view('edit.content',[
+            'data' => $data
+        ]);
     }
 
-    public function create(Request $request)
+    public function update(Request $request)
     {
-        $create = new Image;
-
         $this->validate($request, [
             'title' => ['required', 'string', 'max:100'],
             'category' => ['required', 'string', 'max:100'],
@@ -25,18 +25,20 @@ class CreateController extends Controller
             'url' => ['required', 'string', 'max:255'],
         ]);
 
+        $id = $request->input('id');
         $title = $request->input('title');
         $category = $request->input('category');
         $description = $request->input('description');
         $url = $request->input('url');
 
-        $create->title = $title;
-        $create->category = $category;
-        $create->description = $description;
-        $create->url = $url;
+        $edit = Image::find($id);
+        $edit->title = $title;
+        $edit->category = $category;
+        $edit->description = $description;
+        $edit->url = $url;
 
-        $create->save();
+        $edit->update();
 
-        return redirect()->route('detail', ['id' => $create->id])->with(['message'=>'Imagen creada correctamente']);
+        return redirect()->route('detail', ['id' => $edit->id])->with(['message'=>'Imagen editada correctamente']);
     }
 }
