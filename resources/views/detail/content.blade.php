@@ -9,4 +9,5 @@
 <p>{{ $data->description }}</p>
 <img src="{{ $data->url }}" alt="image-detail">
 <a href="{{ route('edit', ['id' => $data['id']]) }}">Editar</a>
+<a href="{{ route('delete', ['id' => $data['id']]) }}">Eliminar</a>
 {{--boton volver atras o a la lista--}}

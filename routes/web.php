@@ -6,6 +6,7 @@ use App\Http\Controllers\ListController;
 use App\Http\Controllers\CreateController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\EditController;
+use App\Http\Controllers\DeleteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,5 +31,7 @@ Route::get('/detail/{id}', [DetailController::class, 'detail'])->name('detail');
 
 Route::get('/edit/{id}', [EditController::class, 'edit'])->name('edit');
 Route::post('/update', [EditController::class, 'update'])->name('update');
+
+Route::get('/delete/{id}', [DeleteController::class, 'remove'])->name('delete');
 
 
