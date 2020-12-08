@@ -1,0 +1,65 @@
+.form-page {
+    background: url("../images/image-screen.jpg") no-repeat center center fixed;
+}
+
+.row{
+    margin: 150px 0 0 0;
+}
+
+.form-box-body{
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    text-align: center;
+    background: #FFFFFF;
+    padding: 20px 20px 10px 20px;
+    border: 0;
+    color: #666;
+}
+
+.form-box-title {
+    margin-bottom: 1rem !important;
+    margin-top: 1rem !important;
+    font-size: 2.5rem;
+    color: #212529;
+}
+
+.box-info{
+    padding: 0;
+    display: flex;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 23px 50px 80px 50px;
+    color: #212529;
+    background-color: #FFFFFF;
+    opacity: 0.8;
+}
+
+.form-group {
+    display: flex;
+}
+
+.form-control {
+    flex: 1 1 auto;
+
+}
+
+.form-control:focus {
+    border-color: rgb(45, 254, 149) !important;
+}
+
+.btn-submit {
+    color: #fff;
+    margin-bottom: 14px;
+    background-color: #F9B25C;
+    border-color: #F9B25C;
+}
+
+.btn-submit:hover {
+    color: #fff;
+    margin-bottom: 14px;
+    background-color: #F9A83E;
+    border-color: #F9A83E;
+}
