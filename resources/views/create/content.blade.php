@@ -1,23 +1,48 @@
-<form method="POST" action="{{ route('create.image') }}" enctype="multipart/form-data">
-    @csrf
+@extends('layouts.app')
 
-    <h1>Crear Imagen</h1>
+@section('content')
+    <div class="container">
+        <div class="row">
+            <form method="POST" action="{{ route('create.image') }}" enctype="multipart/form-data">
+                @csrf
 
-        <label for="title">Titulo</label>
-        <input type="text" id="title" name="title"/>
+                <h1>Crear Imagen</h1>
 
-        <label for="category">Categoría</label>
-        <input type="text" id="category" name="category"/>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                <span class="input-group-text">
+                    <i class="fa fa-user"></i>
+                </span>
+                    </div>
+                    <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" required autocomplete="title" autofocus placeholder="Titulo">
 
-        <label for="description">Descripción</label>
-        <textarea id="description" name="description"></textarea>
+                    @error('title')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
 
-        <label for="url">Imagen</label>
-        <input type="text" id="url" name="url" placeholder="Copiar direccion de imagen"/>
-
-        <button type="submit">
-            crear
-        </button>
+                </div>
 
 
-</form>
+{{--                <label for="title">Titulo</label>--}}
+{{--                <input type="text" id="title" name="title"/>--}}
+
+                <label for="category">Categoría</label>
+                <input type="text" id="category" name="category"/>
+
+                <label for="description">Descripción</label>
+                <textarea id="description" name="description"></textarea>
+
+                <label for="url">Imagen</label>
+                <input type="text" id="url" name="url" placeholder="Copiar direccion de imagen"/>
+
+                <button type="submit">
+                    crear
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+@endsection
