@@ -3,6 +3,7 @@
 @section('content')
     <form method="POST" action="{{ route('update') }}" enctype="multipart/form-data">
         @csrf
+        <input type="hidden" name="id" value="{{ $data['id'] }}">
         <h1 class="form-box-title">Editar Imagen</h1>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
@@ -10,7 +11,7 @@
                         <i class="fa fa-pencil-square-o"></i>
                     </span>
             </div>
-            <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" required autocomplete="title" autofocus placeholder="Titulo">
+            <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ $data['title'] }}" required autocomplete="title" autofocus placeholder="Titulo">
 
             @error('title')
             <span class="invalid-feedback" role="alert">
@@ -25,7 +26,7 @@
                         <i class="fa fa-pencil-square-o"></i>
                     </span>
             </div>
-            <input id="category" type="text" class="form-control @error('category') is-invalid @enderror" name="category" required autocomplete="category" autofocus placeholder="Categoría">
+            <input id="category" type="text" class="form-control @error('category') is-invalid @enderror" name="category" value="{{ $data['category'] }}" required autocomplete="category" autofocus placeholder="Categoría">
 
             @error('category')
             <span class="invalid-feedback" role="alert">
@@ -40,7 +41,7 @@
                         <i class="fa fa-pencil-square-o"></i>
                     </span>
             </div>
-            <textarea id="description" class="form-control @error('description') is-invalid @enderror" name="description" required autocomplete="description" autofocus placeholder="Descripción"></textarea>
+            <textarea id="description" class="form-control @error('description') is-invalid @enderror" name="description" required autocomplete="description" autofocus placeholder="Descripción">{{ $data['description'] }}</textarea>
 
             @error('description')
             <span class="invalid-feedback" role="alert">
@@ -55,7 +56,7 @@
                         <i class="fa fa-picture-o"></i>
                     </span>
             </div>
-            <input id="url" type="text" class="form-control @error('url') is-invalid @enderror" name="url" required autocomplete="url" autofocus placeholder="Copiar dirección de imagen">
+            <input id="url" type="text" class="form-control @error('url') is-invalid @enderror" name="url" value="{{ $data['url'] }}" required autocomplete="url" autofocus placeholder="Copiar dirección de imagen">
 
             @error('url')
             <span class="invalid-feedback" role="alert">

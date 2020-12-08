@@ -45,18 +45,6 @@
                     </div>
                 </div>
             </div>
-{{--            <h1>Detalle</h1>--}}
-            @if(session('message'))
-                <div>
-                    {{ session('message') }}
-                </div>
-            @endif
-
-
-
-
-
-            {{--boton volver atras o a la lista--}}
         </div>
     </div>
 
