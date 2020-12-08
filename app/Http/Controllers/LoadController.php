@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Image;
 
 class LoadController extends Controller
@@ -29,7 +28,6 @@ class LoadController extends Controller
             $images->save();
         }
 
-        return redirect()->route('list');
-
+        return redirect()->route('list')->with(['message'=>'Los datos de la API se han cargado correctamente']);
     }
 }

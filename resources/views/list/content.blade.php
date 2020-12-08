@@ -1,30 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
-
-@if(session('message'))
-    <div>
-        {{ session('message') }}
-    </div>
-@endif
-
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            <h3>LISTADO DE IMÁGENES</h3>
+    <div class="container box">
+        @if(session('message'))
+            <div class="alert alert-success" role="alert">
+                {{ session('message') }}
+            </div>
+        @endif
+        <div class="row">
             @foreach($listData as $data)
-                <div class="row">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                        <p>{{ $data['title'] }}</p>
-                        <p>{{ $data['category'] }}</p>
-                        <img src="{{ $data['url'] }}" alt="image">
-                        <div class="detalle">
-                            <a href="{{ route('detail', ['id' => $data['id']]) }}">ver detalle</a>
-                        </div>
-                    </div>
+                <div class="col-md-4">
+                    <p class="title-category">{{ $data['title'] }}</p>
+                    <img src="{{ $data['url'] }}" id="url-list" alt="image">
+                    <p>
+                        <a href="{{ route('detail', ['id' => $data['id']]) }}" type="submit" class="btn btn-block btn-flat btn-info">
+                            <i class="fa fa-eye"></i>
+                            <span>Detalle</span>
+                        </a>
+                    </p>
                 </div>
             @endforeach
         </div>
     </div>
-</div>
 @endsection

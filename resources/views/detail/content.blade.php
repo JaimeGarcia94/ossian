@@ -1,7 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container detail-box">
+    <div class="container box">
+        @if(session('message'))
+            <div class="alert alert-success" role="alert">
+                {{ session('message') }}
+            </div>
+        @endif
         <div class="row">
             <div class="col-md-12">
                 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
@@ -18,7 +23,7 @@
                 </div>
 
                 <div class="col-12">
-                    <img src="{{ $data->url }}" id="url-image" alt="image-detail">
+                    <img src="{{ $data->url }}" id="url-detail" alt="image-detail">
                 </div>
 
                 <div class="col-12 text-justify">
