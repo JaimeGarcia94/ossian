@@ -10,7 +10,7 @@
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
     text-align: center;
     background: #FFFFFF;
-    padding: 20px 20px 10px 20px;
+    padding: 20px 20px 20px 20px;
     border: 0;
     color: #666;
 }
@@ -50,16 +50,3 @@
     border-color: rgb(45, 254, 149) !important;
 }
 
-.btn-submit {
-    color: #fff;
-    margin-bottom: 14px;
-    background-color: #F9B25C;
-    border-color: #F9B25C;
-}
-
-.btn-submit:hover {
-    color: #fff;
-    margin-bottom: 14px;
-    background-color: #F9A83E;
-    border-color: #F9A83E;
-}

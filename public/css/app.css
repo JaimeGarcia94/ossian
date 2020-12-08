@@ -1,0 +1,54 @@
+.app-page{
+    background: url("../images/image-screen.jpg") no-repeat center center fixed;
+}
+
+.detail-box{
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    text-align: center;
+    background: #FFFFFF;
+    padding: 20px 20px 20px 20px;
+    border: 0;
+}
+
+.nav-title{
+    font-size: 1.125rem;
+}
+
+#buttonBack{
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+#buttonBack:hover{
+    background: none;
+    color: #212529;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    vertical-align: middle;
+}
+
+#url-image{
+    max-width: 100%;
+    margin-bottom: 20px;
+
+}
+
+.title-category{
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+@media (max-width: 550px){
+    .button-edit a{
+        margin-bottom: 10px;
+    }
+}

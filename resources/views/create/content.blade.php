@@ -7,7 +7,7 @@
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <span class="input-group-text">
-                    <i class="fa fa-user"></i>
+                    <i class="fa fa-pencil-square-o"></i>
                 </span>
             </div>
             <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" required autocomplete="title" autofocus placeholder="Titulo">
@@ -22,7 +22,7 @@
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <span class="input-group-text">
-                    <i class="fa fa-user"></i>
+                    <i class="fa fa-pencil-square-o"></i>
                 </span>
             </div>
             <input id="category" type="text" class="form-control @error('category') is-invalid @enderror" name="category" required autocomplete="category" autofocus placeholder="Categoría">
@@ -37,7 +37,7 @@
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <span class="input-group-text">
-                    <i class="fa fa-user"></i>
+                    <i class="fa fa-pencil-square-o"></i>
                 </span>
             </div>
             <textarea id="description" class="form-control @error('description') is-invalid @enderror" name="description" required autocomplete="description" autofocus placeholder="Descripción"></textarea>
@@ -52,7 +52,7 @@
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <span class="input-group-text">
-                    <i class="fa fa-user"></i>
+                    <i class="fa fa-picture-o"></i>
                 </span>
             </div>
             <input id="url" type="text" class="form-control @error('url') is-invalid @enderror" name="url" required autocomplete="url" autofocus placeholder="Copiar dirección de imagen">
@@ -65,8 +65,9 @@
         </div>
 
         <div class="col-xs-12">
-            <button type="submit" class="btn btn-block btn-flat btn-submit">
-                {{__('Crear')}}
+            <button type="submit" class="btn btn-block btn-flat btn-success">
+                <i class="fa fa-plus"></i>
+                <span>Crear</span>
             </button>
         </div>
     </form>
